@@ -11,6 +11,7 @@
     <groupId>com.maxsh</groupId>
     <artifactId>spring-boot-jsp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
     <name>spring-boot-jsp</name>
     <description>Demo project for Spring Boot With JSP</description>
 
@@ -22,6 +23,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <!-- 排除内置容器，排除内置容器导出成 war 包可以让外部容器运行spring-boot项目-->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
