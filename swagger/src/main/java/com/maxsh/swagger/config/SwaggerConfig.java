@@ -36,15 +36,16 @@ public class SwaggerConfig {
 
     private Tag[] getTags() {
         Tag[] tags = {
-                new Tag("2-消息管理", "消息管理的API"),
-                new Tag("3-表格相关", "表格相关的API")
+                new Tag("2-教师管理", "教师管理的API"),
+                new Tag("3-学生管理", "学生管理的API"),
+                new Tag("4-教学管理", "教学管理的API")
         };
         return tags;
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("用户管理")
+                .title("XXX平台")
                 .description("用户管理系统 API 1.0 操作文档")
                 //服务条款网址
                 .termsOfServiceUrl("http://www.maxsh.cn/")
