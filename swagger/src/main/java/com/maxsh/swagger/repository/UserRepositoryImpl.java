@@ -1,8 +1,8 @@
-package swagger.repository;
+package com.maxsh.swagger.repository;
 
 
 import org.springframework.stereotype.Service;
-import swagger.domain.User;
+import com.maxsh.swagger.domain.User;
 
 import java.util.ArrayList;
 import java.util.List;

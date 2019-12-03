@@ -1,4 +1,4 @@
-package swagger.domain;
+package com.maxsh.swagger.domain;
 
 /**
  * User

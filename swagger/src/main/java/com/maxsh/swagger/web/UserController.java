@@ -1,10 +1,11 @@
-package swagger.web;
+package com.maxsh.swagger.web;
 
 
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import swagger.domain.User;
-import swagger.repository.UserRepository;
+import com.maxsh.swagger.domain.User;
+import com.maxsh.swagger.repository.UserRepository;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ import java.util.List;
  * @description: TODO
  * @date 2019/12/02
  */
+@Api(tags={"1-用户管理"})
 @RestController
 public class UserController {
 
