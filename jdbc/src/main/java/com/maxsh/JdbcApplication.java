@@ -1,4 +1,4 @@
-package com.maxsh.jdbc;
+package com.maxsh;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
