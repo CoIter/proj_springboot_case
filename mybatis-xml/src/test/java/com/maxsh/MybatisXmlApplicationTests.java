@@ -2,7 +2,9 @@ package com.maxsh;
 
 import com.maxsh.enums.UserSexEnum;
 import com.maxsh.mapper.UserMapper;
+import com.maxsh.model.Page;
 import com.maxsh.model.User;
+import com.maxsh.param.UserParam;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -34,6 +36,19 @@ class MybatisXmlApplicationTests {
         userMapper.update(user1);
         //查询
         List<User> users = userMapper.getAll();
+    }
+
+
+    @Test
+    @DisplayName("测试分页查询")
+    public void testPage() {
+        UserParam userParam =new UserParam();
+        userParam.setSex("MAN");
+        userParam.setCurrentPage(1);
+        List<User> users =userMapper.getList(userParam);
+        long       count =userMapper.getCount(userParam);
+        Page       page  = new Page(userParam,count,users);
+        System.out.println(page);
     }
 
 }
