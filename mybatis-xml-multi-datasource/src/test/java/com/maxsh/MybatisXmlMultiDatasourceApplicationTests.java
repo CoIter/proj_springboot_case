@@ -17,7 +17,6 @@ class MybatisXmlMultiDatasourceApplicationTests {
     private User1Mapper user1Mapper;
     @Autowired
     private User2Mapper user2Mapper;
-
     @Test
     public void testInsert() throws Exception {
         user1Mapper.insert(new User("aa111", "a123456", UserSexEnum.MAN, 18));
