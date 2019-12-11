@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.maxsh</groupId>
-    <artifactId>jdb-multi-datasource</artifactId>
+    <artifactId>jdbc-multi-datasource</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>jdb-multi-datasource</name>
     <description>Demo project for Spring Boot</description>
