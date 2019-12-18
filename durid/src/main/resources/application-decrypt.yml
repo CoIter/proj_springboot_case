@@ -1,16 +1,16 @@
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://192.168.0.128:3306/test?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     # 加密后密文，原密码为 123456
-    password: Y464AerH8tabxQg5DlkUej6gQ64KY73ahgiPyaB0vguLBLjUEEkVu6VBueiXxcnMfVjh1Nbd+lJNUTnS1a3/xg==
+    password: LZ2Wy3ywIqls3hT3vE2lHfmXLjJACo9Kb/PvZT76mrT8X6d1maCx2fCmYfwgy+9DL6qLmoCdgTk35yg+900RZA==
     driverClassName: com.mysql.cj.jdbc.Driver
     druid:
       filter:
         config:
           enabled: true
-      connection-properties: config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIddoZ2mbjHu+mG+KYu6IEgBDDnGr5s+wZaPA2MXoqcXmUIZ6154MXNIAEOjkZaHy1rQ5uku2yO8Hw09hBcv9g8CAwEAAQ==
+      connection-properties: config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJZzjIVworfJbos1V+pBJ99fjHoenIjv428+bZiXDZJGVscxiczssS8Lc0TQIW84zmmgTz+OGDIRQ5ImVAhID7cCAwEAAQ==
       # 连接池的配置信息
       # 初始化时建立物理连接的个数
       initial-size: 3
