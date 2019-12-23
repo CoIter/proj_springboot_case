@@ -3,14 +3,14 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
-    # 加密后密文
-    password: LZ2Wy3ywIqls3hT3vE2lHfmXLjJACo9Kb/PvZT76mrT8X6d1maCx2fCmYfwgy+9DL6qLmoCdgTk35yg+900RZA==
+    publicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCgJv/tMSH8NzFqw/6BfQxNTUlwTBjh4rBSMfWJ8hhTmnpDr+Calloj9HHMxEJGyUUmy0/Rl0+snW2k5VZP/7syVQ0VdUbLzcQNi8h7PiK80QRGBc4fp8MiY+HePM7xlt9jjPLaDr3hgzn/tN/pYzXcVPB1K5btaVEpIk/yx0cHawIDAQAB
     driverClassName: com.mysql.cj.jdbc.Driver
     druid:
       filter:
         config:
           enabled: true
-      connection-properties: config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJZzjIVworfJbos1V+pBJ99fjHoenIjv428+bZiXDZJGVscxiczssS8Lc0TQIW84zmmgTz+OGDIRQ5ImVAhID7cCAwEAAQ==
+      connection-properties: publicKey=${spring.datasource.publicKey};password=B8tmo2+GByNV7vVH2rlO8aetyEqsh8MveoNn6FDCtGy99JHDVo2y3WpsxdRZMZjUuBJ5CluKGh/QB2fOxK07ifeRvGCGLpiR2fVoe4D9Jkpi10bUlUpBJf2nHjKXpf6mrVbd3iMe8T5+AmW6e9EUWaEkcjng+OOepwymUkq5GOg=
+      password-callback-class-name: com.maxsh.util.DBPasswordCallback
       # 连接池的配置信息
       # 初始化时建立物理连接的个数
       initial-size: 3
