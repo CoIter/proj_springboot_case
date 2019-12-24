@@ -11,8 +11,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2019/12/16
  */
 @SpringBootApplication
-public class DuridApplication {
+public class DruidApplication {
     public static void main(String[] args) {
-        SpringApplication.run(DuridApplication.class, args);
+        SpringApplication.run(DruidApplication.class, args);
     }
 }
