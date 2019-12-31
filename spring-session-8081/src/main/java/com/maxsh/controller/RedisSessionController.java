@@ -18,13 +18,14 @@ import java.util.Map;
 @RestController
 public class RedisSessionController {
 
-    @Value("port")
+    @Value("${server.port}")
     private String port;
 
     @RequestMapping(value = "/setSession")
     public Map<String, Object> setSession (HttpServletRequest request){
         Map<String, Object> map = new HashMap<>();
         request.getSession().setAttribute("message", request.getRequestURL());
+        map.put("server.port", port);
         map.put("request Url", request.getRequestURL());
         return map;
     }
@@ -32,6 +33,7 @@ public class RedisSessionController {
     @RequestMapping(value = "/getSession")
     public Object getSession (HttpServletRequest request){
         Map<String, Object> map = new HashMap<>();
+        map.put("server.port", port);
         map.put("sessionId", request.getSession().getId());
         map.put("message", request.getSession().getAttribute("message"));
         return map;
